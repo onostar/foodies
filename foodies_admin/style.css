@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,600&family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+*, *::after, *::before{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font:14px/1.5 'Poppins', Sans-serif;
+    color:#222;
+    background:#f1f4f5;
+    position:relative;
+    height:100vh;
+    top:0;
+    left:0;
+}
+#mainBody{
+    height:auto;
+    position:relative;
+}
+a{
+    color:chocolate;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+button{
+    background: chocolate;
+    color:#fff;
+    padding:5px;
+    cursor:pointer;
+}
+.banner_img{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+}
+.banner_img img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+ /* .top_head{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:1px 10px;
+}
+.social_media a{
+    font-size:1.2rem;
+    transition:.3s all ease-in-out;
+}
+.social_media a:hover{
+    opacity:.6;
+}
+.contact_phone i{
+    font-size:1.2rem;
+    color:chocolate;
+}  */
+header{
+    width:100%;
+    background:#fff;
+    position: sticky;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    min-height:10vh;
+    box-shadow: 2px 2px 2px 2px #c4c4c4;
+    z-index:2;
+    padding:5px 50px;
+}
+.admin_header{
+    position:fixed;
+    top:0;
+    left:0;
+}
+.logo{
+    width:20vw;
+    height:10vh;
+}
+.logo img{
+    width:100%;
+    height:100%;
+}
+.rms{
+     margin-left:30px;
+}
+.rms h2{
+    font-size:1.5rem;
+    text-transform: uppercase;
+    color:rgb(102, 100, 100);
+    font-family:'Lora';
+}
+header i{
+    font-size:1rem;
+}
+.login{
+    position:relative;
+}
+#loginDiv{
+    background:transparent;
+    border-radius:0;
+    border:none;
+    color:#222;
+}
+#loginDiv:hover{
+    color:chocolate;
+    background:#f1f0f0;
+}
+.login_option{
+    display:none;
+    position:absolute;
+    background:#fff;
+    min-width:15vw;
+    padding:10px 0;
+    z-index:2;
+    box-shadow: 1px 1px 1px 1px #c4c4c4;
+}
+.login_option div{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.login button{
+    background:chocolate;
+    margin:0 2px;
+    color:#fff;
+    padding:5px;
+    border-radius:5px;
+    font-size:.9rem;
+}
+.login button i{
+    padding:10px;
+    
+}
+.login_option h3{
+    font-size:1.1rem;
+    margin:10px;
+    opacity:.7;
+}
+#loginBtn{
+    display:block;
+    width:70%;
+    padding:10px 5px;
+    border:none;
+    box-shadow:2px 2px 2px 2px #e2e2e2;
+}
+#loginBtn a{
+    color:#fff;
+}
+.signupBtn{
+    color:chocolate;
+    background:transparent;
+    padding:15px;
+    display:block;
+    width:100%;
+    text-align:center;
+    border-top:2px solid rgb(231, 226, 226);
+    border-bottom:2px solid #c4c4c4;
+    text-transform: uppercase;
+}
+.signupBtn:hover, .signupBtn:focus{
+    background:rgb(231, 226, 226);
+}
+#logoutBtn{
+    display:block;
+    width:70%;
+    padding:10px;
+    border:none;
+    margin:10px 0;
+    
+}
+#logoutBtn a{
+    color:#fff;
+    padding:10px 5px;
+}
+main{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+}
+.admin_main{
+    position:relative;
+    height:auto;
+    width:auto;
+}
+#login_reg{
+    display:flex;
+    background:#fff;
+    box-shadow: 2px 2px 5px 3px #c4c4c4;
+    position:relative;
+    top:20vh;
+    width:40%;
+    margin:auto;
+    max-height: fit-content;
+    padding:5px 0;
+}
+#login_reg .login_details{
+    padding:20px;
+    width:80%;
+    margin:auto;
+}
+#login_reg h2{
+    color:rgba(66, 65, 65, .8);
+    font-size:1.1rem;
+    margin-bottom:10px;
+}
+#login_reg input{
+    padding:10px;
+    width:100%;
+}
+#login_reg button{
+    min-width:200px;
+    border:none;
+    padding:10px;
+    margin-top:10px;
+    font-size:.9rem;
+}
+#login_reg button:hover, #login_reg button:focus{
+    background:#000;
+}
+.error p{
+    background:rgb(243, 143, 143);
+    color:#fff;
+    margin-bottom:5px;
+    text-align:center;
+
+}
+.success{
+    width:70%;
+    margin:30px auto 0;
+}
+.success p{
+    background:green;
+    color:#fff;
+    text-align:center;
+    font-size:1.1rem;
+    padding:5px;
+}
+/* aside */
+.admin_main aside{
+    width:18vw;
+    background:#fff;
+    height:100vh;
+    position:fixed;
+    margin-top:10vh;
+    box-shadow:2px 2px 2px #c4c4c4;
+}
+.admin_main aside nav{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    height:100%;
+    align-items:center;
+}
+.admin_main aside nav h3{
+    font-size:1rem;
+    color: rgba(66, 65, 65, .8);
+    text-transform:uppercase;
+    font-family:'Lora';
+    letter-spacing: 2px;
+    margin-top:20px;
+    border-bottom: 1px solid rgb(102, 100, 100);
+    display:block;
+    width:100%;
+    text-align:center;
+    padding:5px;
+}
+.admin_main aside nav ul{
+    width:100%;
+}
+.admin_main aside nav ul li{
+    list-style: none;
+    border-bottom:1px solid rgb(102, 100, 100);
+    width:100%;
+    position:relative;
+}
+.admin_main aside nav ul li a:hover, .admin_main aside nav ul li a:focus{
+    background:chocolate;
+    color:#fff;
+    
+}
+.admin_main aside nav ul li a{
+    color:rgba(66, 65, 65, .8);
+    padding:15px 20px;
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+}
+.admin_main aside nav ul li a:hover{
+    color:#fff;
+}
+.admin_main aside nav ul li ul{
+    position:relative;
+    display:none;
+    margin-left:15px;
+    transform:scale(0);
+    border-left:1px solid rgb(146, 140, 140);
+    transition:1s all;
+    animation:.2s show 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+
+}
+@keyframes show{
+    to{
+        transform:scale(1);
+    }
+}
+.admin_main aside nav ul li ul li{
+    border:none;
+}
+.admin_main aside nav ul li ul li a{
+    padding:10px 15px;
+}
+.admin_main aside nav ul li ul li a:hover, .admin_main aside nav ul li ul li a:focus{
+    background:none;
+    color:chocolate;
+}
+#contents{
+    position:absolute;
+    left:18vw;
+    width:80vw;
+    margin-top:10vh;
+}
+#dashboard{
+    display:flex;
+    justify-content: space-between;
+    margin:20px auto;
+    width:90%;
+}
+#dashboard #userSummary{
+    min-height:300px;
+    width:200px;
+    box-shadow:2px 2px 2px 2px #c4c4c4;
+}
+#dashboard #userSummary figure{
+    background:chocolate;
+    width:100%;
+    
+}
+#dashboard #userSummary figure #user_img{
+    width:100%;
+    padding:10px;
+}
+#dashboard #userSummary figure img{
+    border-radius: 50%;
+    width:100%;
+    height:150px;
+    /* margin:10px auto; */
+}
+#dashboard #userSummary figure figcaption{
+    background:#fff;
+    color:rgb(95, 93, 93);
+    font-size:.8rem;
+    text-transform:capitalize;
+}
+#dashboard #userSummary figure figcaption h3{
+    display:block;
+    border-bottom: 1px solid rgb(95, 93, 93);
+    padding:10px;
+}
+#dashboard .cards{
+    min-width:230px;
+    height:130px;
+    box-shadow:2px 2px 2px 2px #c4c4c4;
+    border-radius:4px;
+    padding:20px;
+    cursor:pointer;
+    transition: .2s all ease-in-out;
+}
+#dashboard .cards:hover, #dashboard .cards:focus{
+    box-shadow:3px 3px 3px 3px #c4c4c4;
+    transform:scale(1.05);
+}
+#dashboard .cards a{
+    color:#fff;
+}
+#dashboard .cards p{
+    font-size:1.1rem;
+    text-align:center;
+    text-transform: uppercase;
+}
+#dashboard .cards .infos{
+    margin-top:20px;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    font-size:2rem;
+}
+#dashboard #card1{
+    background:green;
+}
+#dashboard #card2{
+    background:skyblue;
+}
+#dashboard #card3{
+    background:red;
+}
+#dashboard #card0{
+    background:rgb(155, 155, 24);
+}
+
+/* create users */
+#createUser{
+    display:none;
+    margin:30px 0;
+    width:90%;
+}
+.add_user_form{
+    width:80%;
+    margin:0 auto;
+    box-shadow:3px 3px 5px 3px #807d7d;
+    background:#fff;
+    transform:scale(0);
+    animation:.2s show 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    
+}
+@keyframes show{
+    to{
+        transform:scale(1);
+    }
+}
+.add_user_form h3{
+    padding:10px;
+    background:rgb(224, 55, 55);
+    color:#fff;
+    text-transform: capitalize;
+}
+.add_user_form form{
+    width:90%;
+    margin:auto;
+    padding:10px;
+}
+.add_user_form form .inputs{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin:20px 0;
+}
+.add_user_form form .inputs .data{
+    width:47%;
+}
+.add_user_form form .inputs .data label{
+    color:#504f4f;
+    font-size:1rem;
+}
+.add_user_form form .inputs .data input, .add_user_form form .inputs .data select, .add_user_form form .inputs .data textarea{
+    padding:10px;
+    width:100%;
+}
+.add_user_form form button{
+    background:green;
+    color:#fff;
+    padding:10px;
+    font-size:1rem;
+    border:none;
+}
+#addRestaurant, #addCategories, #addItems, #disableUsers, #deleteItems{
+    display:none;
+    margin:30px 0;
+}
+.success_message p{
+    font-size:1.2rem;
+    color:green;
+    padding:10px;
+    width:100%;
+    text-decoration:underline;
+}
+.error_message p{
+    font-size:1.2rem;
+    color:red;
+    padding:10px;
+    width:100%;
+    text-decoration:underline;
+
+}
+.info{
+    width:80%;
+    margin:auto;
+}
+.info p{
+    font-size:1.2rem;
+    color:green;
+    padding:10px;
+    width:100%;
+    text-decoration:underline;
+}
+.info span{
+    font-weight:bold;
+    text-transform: uppercase;
+}
+.info .exist{
+    color:red;
+}
+#delete_item{
+    background:red;
+}
+
+/* management */
+#restaurantList, #menuList, #priceList, #userList, #featuredItems, #customers, #orderList, #deliveryList, #cancelledDeliveries{
+    display:none;
+}
+.management{
+    width:90%;
+    margin:20px auto;
+    animation:.3s drop 1;
+    animation-fill-mode: forwards;
+}
+@keyframes drop{
+    0%{
+        transform:translateY(100%);
+    }
+    100%{
+        transform:translateY(0%);
+    }
+}
+
+.management h3{
+    text-align:center;
+    font-size:1.5rem;
+    text-transform: capitalize;
+    color:rgb(95, 106, 110);
+}
+.management hr{
+    width:50px;
+    height:4px;
+    background:skyblue;
+    margin:10px auto;
+}
+.management .search{
+    width:30%;
+}
+.management .search input{
+    padding:10px;
+    width:100%;
+    border-radius:10px;
+}
+.management table{
+    border:1px solid skyblue;
+    box-shadow: 2px 2px 2px 2px #c4c4c4;
+    width:100%;
+    border-collapse: collapse;
+    border-color:#c4c4c4;
+}
+.management table thead{
+    background:skyblue;
+    color:#fff;
+}
+.management table td{
+    padding:5px;
+}
+.management table thead tr{
+    border:1px solid #c4c4c4;
+    
+}
+.management table thead tr td{
+    font-weight:bold;
+    text-transform: uppercase;
+    font-size:1rem;
+    padding:10px;
+    border:1px solid #fff;
+}
+.management table tbody{
+    color:#222;
+    background:#fff;
+}
+/* .management table tbody tr{
+    border:1px solid rgba(146, 144, 144, 0.6);
+} */
+.management table tbody tr td{
+    border:1px solid rgba(156, 155, 155, 0.4);
+    margin:0;
+}
+.management table tbody tr .prices form{
+    width:100%;
+}
+.management table tbody tr .prices form input{
+    padding:5px;
+    background:transparent;
+    border:1px solid #c4c4c4;
+    border-radius:5px;
+}
+.management table tbody tr .prices form button{
+    background:green;
+    border-radius:5px;
+}
+#priceTable, #featuredTable{
+    background:rgba(48, 158, 209, .1);
+}
+#priceTable thead, #featuredTable thead{
+    background:rgb(48, 158, 209);
+}
+#addFeatured{
+    margin:10px 0 50px 0;
+}
+#addFeatured h3{
+    text-align:left;
+    font-size:1.1rem;
+}
+#addFeatured input, #addFeatured select{
+    border-radius:10px;
+}
+.select_date{
+    width:30%;
+}
+.select_date form{
+    width:90%;
+    margin:0 auto;
+}
+.select_date form .from_to_date{
+    margin:20px 0;
+}
+.select_date form .from_to_date label{
+    font-size:1rem;
+}
+.select_date form input{
+    width:100%;
+    padding:10px;
+    border-radius: 5px;
+    background:#fff;
+}
+.select_date form button{
+    width:50%;
+    color:#fff;;
+    font-size:1rem;
+    text-transform:capitalize;
+}
+.user_menu{
+    display:flex;
+    width:100%;
+    justify-content: space-around;
+    background:#000;
+    align-items: center;
+}
+.user_menu h3{
+    color:#fff!important;
+}
+.user_menu img{
+    width:50px;
+    height:auto;
+    border-radius:50%;
+    margin:10px;
+}
